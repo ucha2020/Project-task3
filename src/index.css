@@ -1,13 +1,228 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    position: relative;
+    margin: 0;
+    padding: 2vh;
+    max-width: 60%;
+    height: 100vh;
+    overflow: auto;
 }
+#root{
+    max-height: 100%;
+}
+.layoutPage{
+    border: 5px solid lightgray;
+    padding: 5px;
+    max-height: 50%;
+    overflow: auto;
+}
+nav{
+    max-height: 90vh;
+}
+.displayPage{
+   
+    background-color: whitesmoke;
+    height: 78vh;
+    overflow-y: scroll;
+}
+.scrollStyle{
+    position: relative;
+    height: 686px;
+    width: auto;
+    overflow: auto;
+    will-change: transform;
+    direction: ltr;
+}
+.displayContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    grid-gap: 10px;
+    height: 200vh;
+}
+.pagingBar{
+    width: 330px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: inline-block;
+    border: 2px ridge;
+    background-color: white;
+}
+.pagingItem:link,.pagingItem:visited {
+    background-color: #ddd;
+    display: inline-block;
+    color:black;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bolder;
+ }
+.pagingItem:hover{
+    background-color: rgba(0, 0, 0, 0.521);
+    color:white;
+}
+.pagingItem:active{
+    background-color: black;
+    color:white;
+}
+.header{
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+}
+.formDiv{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    max-height: 70vh;
+    overflow: hidden;
+}
+.form1{
+    width: 50%;
+    max-height: 95%;
+}
+.formCard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 5px;
+    width: auto;
+    height: 90%;
+    overflow: auto;
+    font-size: small;
+ }
+ .formImg{
+    width: auto;
+    height: 60%;
+ }
+
+ .DisplayCard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 5px;
+    width: auto;
+    height: 90%;
+    overflow: auto;
+    font-size: small;
+}
+
+.displayImg{
+    width: 40%;
+ }
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.521);
+}
+.cardContainer{
+    padding: 3px 8px;
+    overflow: auto;
+}
+.cardsDiv{
+    display: flex;
+    flex-direction: column;
+    background-color: #aaa;
+    padding: 10px;
+    width: 50%;
+    max-height: 67vh;
+    overflow: auto;
+}
+.cardsControlDiv{
+    background-color: #bbb;
+    flex: 1;
+    padding: 2px;
+}
+.cardsDisplayDiv{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto auto;
+    background-color: #ccc;
+    flex: 5;
+    border-style: inset;
+    align-items: center;
+    min-height: 60%;
+    overflow: hidden;
+    grid-gap: 1%;
+}
+.image{
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    padding: 5px 5px;   
+}
+input{
+    display: block;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    padding: 5px 25px;
+}
+input[type=text]{
+    display: block;
+}
+.deleteInput{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0 0;
+    padding: 1px 2px;
+    display: inline-block;
+    width: auto;
+}
+.deleteButton{
+    border-style: outset;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+div .action{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;    
+}
+button[id=cancel]:hover,.deleteButton:hover{
+    background-color: #a0574544;
+    color: #000;
+}
+button[id=submit]:hover{
+    background-color: #54a04554;
+    color: #000;
+}
+button[id=cancel], button[id=submit], button[id=removeImage] {
+    padding: 5px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: outset;
+}
+.navBar{
+    display: flex;
+    background-color: #333;
+    justify-content: space-evenly;
+}
+.link {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: #ddd;
+    color: black;
+}
+.link.active{
+    background-color: whitesmoke;
+    color: black;
+}
+ 
+ 
