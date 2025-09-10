@@ -13,4 +13,4 @@ const creatDatalist= (data) =>{
   return listArray;
 }  
 
-export{loadData,saveData,creatDatalist};
+export{loadData,saveData,creatDatalist}
